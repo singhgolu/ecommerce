@@ -18,7 +18,9 @@ class ProductController extends Controller
      */
     public function index()
     {
-        //
+        //return $product = Product::with('brands')->get();
+        $products = Product::all();
+        return view('admin.products.list', compact('products'));
     }
 
     /**
@@ -65,11 +67,12 @@ class ProductController extends Controller
         $product->base_price = $request->base_price;
         $product->discount_type = $request->discount_type;
         $product->discount_value = $request->discount_value;
-        //$product->discount_price = $request->;
         $product->product_image = $request->image;
         $product->status = $request->status;
 
         $product->save();
+
+        $product->categories()->sync($request->categories);
 
         $product->attributes()->sync($request->attribute);
 

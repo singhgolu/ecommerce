@@ -48,15 +48,19 @@
 			              	<form role="form" action="{{ route('category.store') }}" method="post">
 			              		{{ csrf_field() }}
 				                <div class="card-body">
-				                	<div class="form-group">
-					                  	<label>Select Category</label>
-					                  	<select name="category" class="form-control select2" style="width: 100%;">
-						                    <option value="0">Select Category</option>
+				                  <div class="form-group">
+					                <label>Select Category</label>
+					                <select name="category" class="form-control select2" style="width: 100%;">
+						              <option value="0">Select Category</option>
+						                @if($categories->count() > 0)
 						                  @foreach($categories as $category)
 						                    <option value="{{ $category->id }}">{{ $category->name }}</option>
 						                  @endforeach
-					                  	</select>
-					                </div>
+						                @else
+					                  	  <option disabled>There is no category yet.</option>
+					                    @endif
+					                  </select>
+					              </div>
 
 					                <div class="form-group">
 					                    <label for="category">Category</label>

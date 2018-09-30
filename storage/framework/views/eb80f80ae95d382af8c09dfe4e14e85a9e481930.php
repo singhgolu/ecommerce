@@ -28,7 +28,7 @@
 		          	<div class="col-md-12">
 			            <div class="card card-primary">
 			              <div class="card-header">
-			                <h3 class="card-title text-center">Create New Brand Here</h3>
+			                <h3 class="card-title text-center">Create New Product Here</h3>
 			              </div>
 			            </div>
 		        	</div>

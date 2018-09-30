@@ -17,4 +17,8 @@ class Product extends Model
     public function attributeValues(){
     	return $this->belongsToMany('App\Model\AttributeValue', 'attribute_value_products');
     }
+
+    public function categories(){
+    	return $this->belongsToMany('App\Model\Category', 'category_products');
+    }
 }

@@ -56,7 +56,7 @@
               </tbody>
             </table>
             @else  
-              <p class="alert alert-warning">No attribute yet. <a href="{{ route('brand.create') }}">Create one</a></p>
+              <p class="alert alert-warning">No brand yet. <a href="{{ route('brand.create') }}">Create one</a></p>
             @endif
         </div>
       </div>

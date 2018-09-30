@@ -26,14 +26,14 @@ class CreateProductsTable extends Migration
             $table->text('description');
             $table->text('specification')->nullable();
             $table->integer('weight')->default(0)->comment = 'in gram';
-            $table->integer('base_price')->default(0);
+            $table->integer('base_price');
             $table->enum('discount_type', ['flat', 'percentage'])->nullable();
             $table->integer('discount_value')->default(0);
             $table->integer('discount_price')->default(0);
             $table->text('product_image')->nullable();
 
             $table->integer('views')->default(0)->comment = 'How many times product viewed';
-            $table->enum('featured_product', ['enable', 'disable']);
+            $table->enum('featured_product', ['enable', 'disable'])->nullable();
             $table->enum('status', ['enable', 'disable']);
 
             $table->timestamps();

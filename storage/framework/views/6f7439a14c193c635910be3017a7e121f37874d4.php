@@ -52,35 +52,11 @@
           <input type="hidden" name="user_type" class="" value="admin">
         </div>
         <div class="row">
-          <div class="col-8">
-            <div class="checkbox icheck">
-              <label>
-                <input type="checkbox"> Remember Me
-              </label>
-            </div>
-          </div>
-          <!-- /.col -->
-          <div class="col-4">
+          <div class="col-12">
             <button type="submit" class="btn btn-primary btn-block btn-flat">Sign In</button>
           </div>
-          <!-- /.col -->
         </div>
       </form>
-
-      <div class="social-auth-links text-center mb-3">
-        <p>- OR -</p>
-        <a href="#" class="btn btn-block btn-primary">
-          <i class="fa fa-facebook mr-2"></i> Sign in using Facebook
-        </a>
-        <a href="#" class="btn btn-block btn-danger">
-          <i class="fa fa-google-plus mr-2"></i> Sign in using Google+
-        </a>
-      </div>
-      <!-- /.social-auth-links -->
-
-      <p class="mb-1">
-        <a href="#">I forgot my password</a>
-      </p>
     </div>
     <!-- /.login-card-body -->
   </div>

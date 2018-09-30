@@ -74,6 +74,7 @@
     } else {
       $('.main-header').removeClass('border-bottom')
     }
+    console.log($(this).is(':checked'), 'hi')
   })
   $checkbox_container.append($navbar_border)
   $checkbox_container.append('<span>Navbar border</span>')
@@ -115,6 +116,7 @@
     })
 
     $sidebar.addClass(sidebar_class)
+    console.log('added ' + sidebar_class)
   }))
 
   $container.append('<h6>Light Sidebar Variants</h6>')
@@ -131,6 +133,7 @@
     })
 
     $sidebar.addClass(sidebar_class)
+    console.log('added ' + sidebar_class)
   }))
 
   var logo_skins = navbar_all_colors

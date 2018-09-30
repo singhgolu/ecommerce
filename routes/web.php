@@ -10,7 +10,18 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+/* Admin Dashboard Route */
+Route::get('user/dashboard', function(){
+	return view('user.dashboard');
+});
+Route::get('test', function(){
+	foreach(App\Model\Category::with('subcategories')->where('parent_id', 0)->get() as $data){
+		foreach($data->subcategories as $subcategory){
+			echo $subcategory->name;
+		}
+		die();
+	}
+});
 Route::get('/', function () {
     return view('welcome');
 });

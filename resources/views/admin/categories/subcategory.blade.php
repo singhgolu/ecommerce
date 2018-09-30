@@ -58,7 +58,7 @@
                     </tbody>
                 </table>
             @else  
-              <p class="alert alert-warning">No attribute yet. <a href="{{ route('category.create') }}">Create one</a></p>
+              <p class="alert alert-warning">No sub-category yet. <a href="{{ route('category.create') }}">Create one</a></p>
             @endif
         </div>
       </div>

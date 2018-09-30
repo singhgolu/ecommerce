@@ -28,7 +28,7 @@
     <section class="content">
       <div class="card">
         <div class="card-body">
-          
+         @if($attributes->count() > 0)  
           <table class="table">
             <thead>
               <tr>
@@ -60,6 +60,9 @@
               @endforeach
             </tbody>
           </table>
+         @else  
+          <p class="alert alert-warning">No attribute yet. <a href="{{ route('attribute.create') }}">Create one</a></p>
+         @endif
       </div>
     </section>
   </div>
